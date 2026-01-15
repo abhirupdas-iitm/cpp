@@ -24,7 +24,14 @@
 2. Execution keeps going until there is a line which causes the program to terminate, or run another sequence of statements.
 3. Functions can be used to make pre-defined templates to perform a certain task. 
    Note: When using a function, sometimes the variable storing the returned result
-   needs 
-   to have it's type defined beforehand.
+   needs to have it's type defined beforehand.
 
 ## Data Input and Output
+1. The reason why the '<' symbols are used is to show that the output is being returned to the function called, and so act as a 'to the left' indicator.
+2. The following table shows other printing functions and what they do:
+   |Stream|Purpose|
+   |------|-------|
+   |std::cout|Printing data to the console (terminal)|
+   |std::cin|Reading data from the terminal|
+   |std::cerr|Printing errors to the console|
+   |std::colg|Printing log messages to the console|
