@@ -35,3 +35,9 @@
    |std::cin|Reading data from the terminal|
    |std::cerr|Printing errors to the console|
    |std::colg|Printing log messages to the console|
+3. `int`,`char`,`float`,`double`,`bool` and `void` are built-in types, while `std::string`, `std::vector`,`std::map`,`std::cin` and `std::cout` belong to a library, and not to the global namespace. They: 
+   (a) require headers (`<string>`, `<vector>`,`<iostream>`)
+   (b) live inside `namespace std`
+   (c) are not part of the core language.
+
+## Execution Model
