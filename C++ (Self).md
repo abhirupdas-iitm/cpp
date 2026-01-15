@@ -4,7 +4,7 @@
 1. There is no utility in uploading/committing the '.exe' files which are created when a CPP program is executed.
 
 ## FirstCppProgram
-1. "std::endl" is used to print the newline character.
+1. "std::endl" prints a newline and flushes the output buffer. We should prefer '\n' for performance unless flushing is needed. This distinction matters later.
 2. Programs are compiled using the following syntax
    'g++ -std=c++20 program_name.cpp -o program_name.exe'
 3. To see the output, we use the following command format: './program_name.exe'
@@ -27,17 +27,18 @@
    needs to have it's type defined beforehand.
 
 ## Data Input and Output
-1. The reason why the '<' symbols are used is to show that the output is being returned to the function called, and so act as a 'to the left' indicator.
+1. The `<<` symbol inserts data into an output stream (like std::cout).
 2. The following table shows other printing functions and what they do:
    |Stream|Purpose|
    |------|-------|
    |std::cout|Printing data to the console (terminal)|
    |std::cin|Reading data from the terminal|
    |std::cerr|Printing errors to the console|
-   |std::colg|Printing log messages to the console|
-3. `int`,`char`,`float`,`double`,`bool` and `void` are built-in types, while `std::string`, `std::vector`,`std::map`,`std::cin` and `std::cout` belong to a library, and not to the global namespace. They: 
+   |std::clog|Printing log messages to the console|
+3. `int`,`char`,`float`,`double`,`bool` (fundamental type but behaves differently than numeric types) and `void` (type with no value, mainly for functions) are built-in objects, while `std::string`, `std::vector`,`std::map`,`std::cin` and `std::cout` belong to a library, and not to the global namespace. They: 
    (a) require headers (`<string>`, `<vector>`,`<iostream>`)
    (b) live inside `namespace std`
    (c) are not part of the core language.
 
 ## Execution Model
+
