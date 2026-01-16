@@ -158,8 +158,14 @@ Very readable while mapping cleanly to binary.
    (a) Braced Initialization
    (b) Functional Initialization
    (c) Assignment Initialization
-9. The `sizeof()` command is used to get the size of different objects, variables, functions and others.
-10. Variable Naming Rules:
+   |Type|Syntax|Narrowing|Safety|
+   |----|------|---------|------|
+   |Braced|int x{10};|Prevented|High|
+   |Functional|int x(10);|Allowed|Medium|
+   |Assignment|int x = 10;|Allowed|Medium|
+   
+10. The `sizeof()` command is used to get the size of different objects, variables, functions and others.
+11. Variable Naming Rules:
 
    (a) Must start with a letter or underscore
     ```
@@ -190,6 +196,7 @@ Very readable while mapping cleanly to binary.
    ```
    But meaningful names are preferred
    ```
+
 
 
 
