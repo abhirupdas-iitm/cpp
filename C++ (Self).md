@@ -41,7 +41,7 @@
    (c) are not part of the core language.
 
 ## Execution Model
-1. One key thing to note is that declaring `int c = 0;` and `int c;` are different in the sense that in the first case, there are no values that are assigned whereas in the second case, 0 is explicitly assigned.
+1. One key thing to note is that declaring `int c = 0;` and `int c;` are different in the sense that in the first case, there are no values that are assigned whereas in the second case, 0 is explicitly assigned. In the second case, the default value will not be 0, it can be anything and in this context, it is called as "garbage value".
 
 ## Core Language vs Standard Library vs STL
 1. The three can be understood by the following diagram:
@@ -190,5 +190,6 @@ Very readable while mapping cleanly to binary.
    ```
    But meaningful names are preferred
    ```
+
 
 
