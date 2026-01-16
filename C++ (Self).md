@@ -160,6 +160,7 @@ Very readable while mapping cleanly to binary.
    (c) Assignment Initialization
 9. The `sizeof()` command is used to get the size of different objects, variables, functions and others.
 10. Variable Naming Rules:
+
    (a) Must start with a letter or underscore
     ```
     int age;      // okay
@@ -183,10 +184,11 @@ Very readable while mapping cleanly to binary.
    ```
    (e) No spaces allowed
    ```
-    int total marks;  // ❌
+    int total marks;  // not okay
    ```
    (f) Length is unlimited (practically)
    ```
    But meaningful names are preferred
    ```
+
 
