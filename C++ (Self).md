@@ -41,4 +41,7 @@
    (c) are not part of the core language.
 
 ## Execution Model
+1. One key thing to note is that declaring `int c = 0;` and `int c;` are different in the sense that in the first case, there are no values that are assigned whereas in the second case, 0 is explicitly assigned.
+
+## Core Language vs Standard Library vs STL
 
