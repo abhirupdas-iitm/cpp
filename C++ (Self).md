@@ -215,3 +215,5 @@ Loops:
    (a) Never use unsigned in countdown loops
    (b) Unsigned never becomes negative → infinite loop
 
+13. Note: These modifiers only apply to integral types: those in which we can store decimal numbers.
+
