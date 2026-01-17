@@ -196,7 +196,21 @@ Very readable while mapping cleanly to binary.
    ```
    But meaningful names are preferred
    ```
+12. Signed vs Unsigned in C++
+   Signed integers store negative, zero, and positive values
+   `→ default for int, short, long`
+   Unsigned integers store only non-negative values
+   `→ larger positive range using the same bits`
 
+Key differences:
+   (a) Same bits, different interpretation
+   (b) Signed overflow → undefined behavior
+   (C) Unsigned overflow → wraps around (well-defined)
 
+Biggest pitfall:
+   (a) Mixing signed and unsigned → signed gets converted to unsigned
+   (b) Can silently break comparisons and loops
 
-
+Loops:
+   (a) Never use unsigned in countdown loops
+   (b) Unsigned never becomes negative → infinite loop
