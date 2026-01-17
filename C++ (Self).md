@@ -41,7 +41,177 @@
    (c) are not part of the core language.
 
 ## Execution Model
-1. One key thing to note is that declaring `int c = 0;` and `int c;` are different in the sense that in the first case, there are no values that are assigned whereas in the second case, 0 is explicitly assigned.
+1. One key thing to note is that declaring `int c = 0;` and `int c;` are different in the sense that in the first case, there are no values that are assigned whereas in the second case, 0 is explicitly assigned. In the second case, the default value will not be 0, it can be anything and in this context, it is called as "garbage value".
 
 ## Core Language vs Standard Library vs STL
+1. The three can be understood by the following diagram:
+C++
+├── Core Features   ← language rules & syntax
+└── Standard Library
+    └── STL         ← containers + algorithms + iterators
+2. A short note is written for each of the data types:
+
+#### int
+Stores whole numbers (positive, negative, zero).
+Typically 4 bytes.
+Used for counting, indexing, discrete values.
+`int x = 42;`
+
+#### double
+Stores double-precision floating-point numbers.
+More accurate than float.
+Typically 8 bytes.
+Preferred for most real-number calculations.
+`double pi = 3.1415926535;`
+
+#### float
+Stores single-precision floating-point numbers.
+Less precision than double.
+Typically 4 bytes.
+Used when memory or performance is critical.
+`float temp = 36.5f;`
+
+#### char
+Stores a single character.
+Actually stores a small integer (ASCII/Unicode code).
+Typically 1 byte.
+`char c = 'A';`
+
+#### bool
+Stores true or false.
+Used in conditions and logic.
+Internally represented as 0 or 1.
+`bool isReady = true;`
+
+#### void
+Represents “no type” or “no value”.
+Used for:
+Functions that return nothing
+Generic pointers (void*)
+`void print() { }`
+
+#### auto
+Tells the compiler to deduce the type automatically.
+Type is determined at compile time.
+Improves readability and reduces verbosity.
+```
+auto x = 10;      // int
+auto y = 3.14;    // double
+```
+#### ... (ellipsis)
+Used for variadic functions (functions with variable arguments).
+Common in C-style APIs, rare in modern C++.
+`void func(int n, ...);`
+
+### Number Systems
+(a) Binary (Base-2)
+Digits used: 0, 1
+Base: 2
+What it is:
+The native language of computers. Every value in C++ is ultimately stored in binary.
+Why it matters in C++:
+Memory, bits, and hardware operate in binary
+Bitwise operations (&, |, ^, <<, >>) work directly on binary representation
+Example:
+`int x = 5;   // binary: 00000101`
+
+Key use cases:
+Bits, flags, low-level programming, performance-critical code.
+
+(b) Octal (Base-8)
+Digits used: 0–7
+Base: 8
+What it is:
+A compact representation of binary, where each octal digit represents 3 bits.
+How C++ recognizes it:
+Numbers starting with 0 are treated as octal (⚠ legacy behavior)
+`int x = 010;   // octal → decimal 8`
+
+Why it exists:
+Historically used in Unix permissions (chmod 755)
+Easier to read than raw binary
+Key note:
+`!!`Often avoided in modern C++ due to confusion.
+
+(c) Hexadecimal (Base-16)
+Digits used: 0–9, A–F
+Base: 16
+What it is:
+The most programmer-friendly binary representation.
+Each hex digit represents 4 bits.
+How C++ recognizes it:
+`int x = 0x1A;   // hexadecimal → decimal 26`
+
+Why it’s heavily used:
+Memory addresses
+Color codes (0xFF00FF)
+Bit masks
+Debugging and low-level work
+Key advantage:
+Very readable while mapping cleanly to binary.
+
+4. As the range of our data grows, so will the number of digits we would need to represent the data in memory.
+5. Hexadecimal Systems make it easier for us to handle streams of data with 1's and 0's.
+6. Octal has the same goal as Hexadecimal, but it is no longer used in modern times.
+7. Using unsafe type conversions such as `int_narrowing_conversion_assignment = 2.9;` is not advised because this results in loss of data.
+8. There are three types of initialization:
+   (a) Braced Initialization
+   (b) Functional Initialization
+   (c) Assignment Initialization
+   |Type|Syntax|Narrowing|Safety|
+   |----|------|---------|------|
+   |Braced|int x{10};|Prevented|High|
+   |Functional|int x(10);|Allowed|Medium|
+   |Assignment|int x = 10;|Allowed|Medium|
+   
+10. The `sizeof()` command is used to get the size of different objects, variables, functions and others.
+11. Variable Naming Rules:
+
+   (a) Must start with a letter or underscore
+    ```
+    int age;      // okay
+    int _count;   // okay
+    int 2num;     // not okay
+    ```
+   (b) Can contain only letters, digits, and underscores
+    ```
+    int total_sum;   // okay
+    int total-sum;   // not okay
+    ```
+   (c) Cannot be a C++ keyword
+   ```
+   int int;     // not okay
+   int return;  // not okay
+   ```
+   (d) Case-sensitive
+   ```
+   int value;
+   int Value;   // different variables
+   ```
+   (e) No spaces allowed
+   ```
+    int total marks;  // not okay
+   ```
+   (f) Length is unlimited (practically)
+   ```
+   But meaningful names are preferred
+   ```
+12. Signed vs Unsigned in C++
+   Signed integers store negative, zero, and positive values
+   `→ default for int, short, long`
+   Unsigned integers store only non-negative values
+   `→ larger positive range using the same bits`
+
+Key differences:
+   (a) Same bits, different interpretation
+   (b) Signed overflow → undefined behavior
+   (c) Unsigned overflow → wraps around (well-defined)
+
+Biggest pitfall:
+   (a) Mixing signed and unsigned → signed gets converted to unsigned
+   (b) Can silently break comparisons and loops
+
+Loops:
+   (a) Never use unsigned in countdown loops
+   (b) Unsigned never becomes negative → infinite loop
 
