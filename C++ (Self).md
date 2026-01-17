@@ -205,7 +205,7 @@ Very readable while mapping cleanly to binary.
 Key differences:
    (a) Same bits, different interpretation
    (b) Signed overflow → undefined behavior
-   (C) Unsigned overflow → wraps around (well-defined)
+   (c) Unsigned overflow → wraps around (well-defined)
 
 Biggest pitfall:
    (a) Mixing signed and unsigned → signed gets converted to unsigned
@@ -214,3 +214,4 @@ Biggest pitfall:
 Loops:
    (a) Never use unsigned in countdown loops
    (b) Unsigned never becomes negative → infinite loop
+
