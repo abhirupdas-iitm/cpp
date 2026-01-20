@@ -217,3 +217,6 @@ Loops:
 
 13. Note: These modifiers only apply to integral types: those in which we can store decimal numbers.
 
+14. To use the `setprecision()` command, we can set how precise we want the output numbers to be.
+
+## Boolean Systems
