@@ -220,3 +220,5 @@ Loops:
 14. To use the `setprecision()` command, we can set how precise we want the output numbers to be.
 
 ## Boolean Systems
+
+1. The way to 
