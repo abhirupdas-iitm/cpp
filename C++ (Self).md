@@ -247,3 +247,29 @@ Loops:
 
 ## Assignments
 
+1. One key thing to understand is tha, in the 2 blocks of code shown below:
+#### Block 1
+```
+int var123 {111};
+std::cout << "value of var123 : " << std::endl;
+var123=55;
+std::cout << "new value of var123 : " << std::endl;
+```
+
+#### Block 2
+```
+int var123 = 111;
+std::cout << "value of var123 : " << std::endl;
+var123=55;
+std::cout << "new value of var123 : " <<std::endl;
+```
+   While both the blocks mean the same thing, the approach in the second
+   block is better because it is the best way to safely type cast and this
+   also helps us catch errors during compilation, rather than having to
+   deal with errors in the terminal.
+
+2. The function `std::cout << std::boolalpha;` is used to print the values `true` and `false` explicitly because normally the integral values that they represent are what gets printed on the screen.
+
+## Variables and DataTypes
+
+1. 
