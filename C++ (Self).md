@@ -221,4 +221,55 @@ Loops:
 
 ## Boolean Systems
 
-1. The way to 
+1. The way to declare a boolean variable is as follows:
+   `bool red_light {true};`
+
+2. One thing to note here is that in languages like Java and Python, the boolean defaults are in upper-case as in 'True' or 'False'. But in C++, it is written in complete lower-case as 'true' and 'false'.
+
+3. Note: In C++, just like Java there is no need for indentation- because we generally use the bracket system and while brackets are generally not needed for single liner execution lines, it is still advised to always use the bracket system to avoid a phenomenon called "fall-through".
+
+## Characters and Text
+
+1. It is possible to assign a valid ASCII code to a char variable, and the corresponding character will be stored in. We can choose to interpret that either as a character or as an integral value.
+
+2. We can use the `static_cast<int>` to print the value itself and not the character while if we use the `char value = 65;` line, we would the character 'A' as our output since 65 is the ASCII code for 'A'.
+
+3. The format to declare our characters is as follows:
+   `char character1 {'a'};`
+
+## The 'auto' keyword
+
+1. In short: it lets the compiler decide the type.
+
+2. We can always double-check the type assigned by the 'auto' keyword by checking the command `sizeof()` so that we can see if the correct type was assigned to the variable or not.
+
+3. The 'auto' keyword is also very memory efficient and takes up the most appropriate one so that no space is wasted unnecessarily.
+
+## Assignments
+
+1. One key thing to understand is tha, in the 2 blocks of code shown below:
+#### Block 1
+```
+int var123 {111};
+std::cout << "value of var123 : " << std::endl;
+var123=55;
+std::cout << "new value of var123 : " << std::endl;
+```
+
+#### Block 2
+```
+int var123 = 111;
+std::cout << "value of var123 : " << std::endl;
+var123=55;
+std::cout << "new value of var123 : " <<std::endl;
+```
+   While both the blocks mean the same thing, the approach in the second
+   block is better because it is the best way to safely type cast and this
+   also helps us catch errors during compilation, rather than having to
+   deal with errors in the terminal.
+
+2. The function `std::cout << std::boolalpha;` is used to print the values `true` and `false` explicitly because normally the integral values that they represent are what gets printed on the screen.
+
+## Variables and DataTypes
+
+1. 
