@@ -270,6 +270,8 @@ std::cout << "new value of var123 : " <<std::endl;
 
 2. The function `std::cout << std::boolalpha;` is used to print the values `true` and `false` explicitly because normally the integral values that they represent are what gets printed on the screen.
 
-## Variables and DataTypes
+## Operations on Data
 
-1. 
+1. A few to name would be: add, subtratc, divide, multiply, increment, decrement, modulus, formatting and built-in utilities.
+
+2. 
