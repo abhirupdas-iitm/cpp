@@ -294,4 +294,12 @@ std::cout << "new value of var123 : " <<std::endl;
 | **Comma**       | `a, b` |
 | **Conditional** | `a ? b : c` |
 
+2. It is better to make the intent of our program clearer by using parantheses `()` wherever needed to show which functions needs to be executed earlier than the others and not rely much on the precendence itself.
+
+3. Prefix: Increments/Decrements before an action is further performed on the variable.
+Postfix: Increments/Decrements after the next immediate action has been performed.
+
+4. These operators exist only for `+` and `-`, and not for `*`,`%` or `/`.
+
+5. Compound Operators: Using statements like `a+=5` we can imply `a=a+5`. This is a form of short-hand notation.
 
