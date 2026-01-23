@@ -279,6 +279,7 @@ std::cout << "new value of var123 : " <<std::endl;
 ## Precedence and Associativity
 
 1. The precedence of operators can be understood from the table given below:
+
 | Category        | Operators |
 |-----------------|-----------|
 | **Assignment**  | `a = b`, `a += b`, `a -= b`, `a *= b`, `a /= b`, `a %= b`, `a &= b`, `a |= b`, `a ^= b`, `a <<= b`, `a >>= b` |
@@ -292,4 +293,5 @@ std::cout << "new value of var123 : " <<std::endl;
 | **Function Call** | `a(...)` |
 | **Comma**       | `a, b` |
 | **Conditional** | `a ? b : c` |
+
 
