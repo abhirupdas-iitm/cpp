@@ -274,4 +274,22 @@ std::cout << "new value of var123 : " <<std::endl;
 
 1. A few to name would be: add, subtratc, divide, multiply, increment, decrement, modulus, formatting and built-in utilities.
 
-2. 
+2. The integer quotient can be found using the `/` operator while the remainder is found out using the `%` operator which is also known as the modulus operator.
+
+## Precedence and Associativity
+
+1. The precedence of operators can be understood from the table given below:
+| Category        | Operators |
+|-----------------|-----------|
+| **Assignment**  | `a = b`, `a += b`, `a -= b`, `a *= b`, `a /= b`, `a %= b`, `a &= b`, `a |= b`, `a ^= b`, `a <<= b`, `a >>= b` |
+| **Increment**   | `++a`, `a++` |
+| **Decrement**   | `--a`, `a--` |
+| **Arithmetic**  | `+a`, `-a`, `a + b`, `a - b`, `a * b`, `a / b`, `a % b` |
+| **Bitwise**     | `~a`, `a & b`, `a | b`, `a ^ b`, `a << b`, `a >> b` |
+| **Logical**     | `!a`, `a && b`, `a || b` |
+| **Comparison**  | `a == b`, `a != b`, `a < b`, `a > b`, `a <= b`, `a >= b`, `a <=> b` |
+| **Member Access** | `a[...]`, `*a`, `&a`, `a->b`, `a.b`, `a->*b`, `a.*b` |
+| **Function Call** | `a(...)` |
+| **Comma**       | `a, b` |
+| **Conditional** | `a ? b : c` |
+
