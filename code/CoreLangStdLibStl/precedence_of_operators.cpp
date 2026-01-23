@@ -9,7 +9,7 @@ int main(){
     int f {2};
     int g {5};
 
-    int result = a+b*c-d/e-f+g;
+    int result = (a+b)*c-d/e-f+g;
 
     std::cout << "Result : " << result << std::endl;
 
