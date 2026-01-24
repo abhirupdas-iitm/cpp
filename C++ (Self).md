@@ -303,3 +303,27 @@ Postfix: Increments/Decrements after the next immediate action has been performe
 
 5. Compound Operators: Using statements like `a+=5` we can imply `a=a+5`. This is a form of short-hand notation.
 
+6. Whenever we use the `boolalpha` version to print `true` or `false` without actually storing the result, then it is of paramount importance that we put the entire thing in brackets. For example, if we are printing the result of `num1 >= num2` without storing it anywhere, the output that would work error free would be:
+`std::cout << "number 1 >= number 2 : " << (num1 >= num2) << std::endl;`
+
+### Logical Operators
+
+1. There are 3 main logical operators: AND (`&&`), NOT (`!`) and OR (`||`).
+
+2. AND: Evaluates to true when all operands are true. A single false operand will bring the entire expression down to false.
+
+3. OR: Evaluates to true when at least one operand is true. A single true operand will push the entire expression to evaluate to true.
+
+4. NOT: Negates whatever operand you put it with
+
+5. A thing to keep in mind here is that the operators that we use do have precedence but as stated before, we must use paranthese to override the precedence order if we need to serve our own specific purpose to get the desrired result. Refer to the `logical_operators.cpp` more to understand the usage of parantheses in overriding the precedence order.
+
+## Output Formatting
+
+1. We are prtimarily going to use the `<ios>` (a short-hand notation for 'input/output stream base') and the `<iomanip>` (a short-hand notation for input/output manipulators) libraries.
+
+2. An alternative way to use the new line character is to use `\n`. For example, `std::cout << "Hello World" << std::endl;` can be also written as `std::cout << "Hello World\n";`.
+
+3. `std::flush`: It causes immediate sending of data to the device connected to the stream.
+
+4. 
