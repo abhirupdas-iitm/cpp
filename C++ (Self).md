@@ -326,4 +326,13 @@ Postfix: Increments/Decrements after the next immediate action has been performe
 
 3. `std::flush`: It causes immediate sending of data to the device connected to the stream.
 
-4. 
+4. `set::setw`: This is the function that sets a certain width which can be used to format the text into a tabular format.
+
+5. `std::right` makes the data justified to the right while `std::left` makes the data justified to the left. The default is "right adjusted".
+
+6. `std::internal`: In this one, sign is left aligned while data is right adjusted.
+
+7. `std::refill`: We can use this to fill the gaps when we print the things in a tabular format.
+
+8. 
+
