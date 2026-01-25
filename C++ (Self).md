@@ -373,4 +373,34 @@ Postfix: Increments/Decrements after the next immediate action has been performe
 
 Rule: for generic code, use max() and lowest(), not min().
 
-3. 
+## Math Functions
+
+1. To use the math functions, we need to import the `<cmath` library. A few of the functions have been discussed below.
+
+2. `std::floor(x)`: Returns the greatest integer value less than or equal to x. The result is a floating-point number representing that integer.
+
+3. `std::ceil(x)`: Returns the smallest integer value greater than or equal to x. The result is a floating-point number representing that integer.
+
+4. `std::abs(x)`: Returns the absolute (non-negative) value of x. Works for integers and floating-point types.
+
+5. `std::cos(x)`: Returns the cosine of x. x is interpreted in radians.
+
+6. `std::exp(x)`: Returns e raised to the power x. Here, e is Euler’s number (≈ 2.71828).
+
+7. `std::log(x)`: Returns the natural logarithm (base e) of x. x must be greater than 0.
+
+8. `std::pow(x, y)`: Returns x raised to the power y. Both x and y are floating-point compatible.
+
+9. `std::sqrt(x)`: Returns the square root of x. x must be non-negative.
+
+10. `std::round(x)`: Rounds x to the nearest integer value. Halfway cases are rounded away from zero.
+
+11. `std::sin(x)`: Returns the sine of x. x is interpreted in radians.
+
+12. `std::tan(x)`: Returns the tangent of x. x is interpreted in radians and must not be an odd multiple of π/2.
+
+13. Integral types less than 4 bytes in size don't support arithmetic operations. For example, on `char` or `short int`.
+
+14. The same behaviour is present on other operators like bitwise shift operators (>> and <<).
+
+## Flow Control: Conditional Programming
