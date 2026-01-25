@@ -334,5 +334,20 @@ Postfix: Increments/Decrements after the next immediate action has been performe
 
 7. `std::refill`: We can use this to fill the gaps when we print the things in a tabular format.
 
-8. 
+8. `std::boolalpha` and `std::noboolalpha`: These control the boolean output format, either 1/0 or true/false. The default behaviour is same as `noboolalpha`. 
 
+9. `std::showpos`: This can be used to show/hide the positive sign `+` for positive numbers. Meanwhile, the `std::noshowpos` command prevents the `+` sign from being displayed.
+
+10. `std::dec`, `std::hex` and `std::oct`: These are used to print numbers in any of the above mentioned format (whether it is decimal, hexadecimal or octadecimal).
+
+11. `std::showbase`: This functions shows the base for integral types.
+
+12. `std::uppercase`: This changes the case of letters to uppercase when they are being printed to the terminal.
+
+13. `std::lowercase`: This changes the case of letters to lowercase when they are being printed to the terminal.
+
+14. `std::fixed`: formats floating-point output in fixed-point notation, showing a fixed number of digits after the decimal point.
+
+15. `std::scientific`: formats floating-point output in scientific notation, using exponential form `(e)` with a fixed number of digits after the decimal point.
+
+16. 
