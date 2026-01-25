@@ -350,4 +350,27 @@ Postfix: Increments/Decrements after the next immediate action has been performe
 
 15. `std::scientific`: formats floating-point output in scientific notation, using exponential form `(e)` with a fixed number of digits after the decimal point.
 
-16. 
+16. `std::showpoint`: forces the decimal points to be explicitly shown as we wish.
+
+17. The remaining functions can be found at: `https://cppreference.com/`
+
+## Limits
+
+1. A few functions are: `std::numeric_limits<T>::min()`,`std::numeric_limits<T>::max()` and `std::numeric_limits<T>::lowest()`. To use these functions however, we would need to import the `limits` library. 
+
+2. The above-mentioned functions can be used to find details of different data types. A few examples would clear this.
+   (a) std::numeric_limits<T>::max() → largest finite value of T.
+   
+   (b) std::numeric_limits<T>::min() 
+   integers: smallest (most negative) value
+   floating-point: smallest positive normalized value (not negative)
+
+   (c) std::numeric_limits<T>::lowest() → most negative finite value (same as min() for integers, different for floating-point).
+
+3. The program `limits_functions.cpp` shows a few examples on how to use the above-mentioned functions.
+
+
+
+Rule: for generic code, use max() and lowest(), not min().
+
+3. 
