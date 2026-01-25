@@ -404,3 +404,13 @@ Rule: for generic code, use max() and lowest(), not min().
 14. The same behaviour is present on other operators like bitwise shift operators (>> and <<).
 
 ## Flow Control: Conditional Programming
+
+1. There are 4 primary ones: `if`, `else`, `switch` and `ternary` operator.
+
+### `if` statement:
+
+1. One thing to note is that sometimes using `&&` is better than using a `nested-if` statement.
+
+2. `else if`: allows us to test several conditions and also ensures no fall-through happens, which is a common logical flaw when `nested-if`s are used.
+
+3. 
