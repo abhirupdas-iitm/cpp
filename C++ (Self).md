@@ -413,4 +413,15 @@ Rule: for generic code, use max() and lowest(), not min().
 
 2. `else if`: allows us to test several conditions and also ensures no fall-through happens, which is a common logical flaw when `nested-if`s are used.
 
-3. 
+### switch statement
+
+1. The use remains same as the `else-if` statements; to test for several conditions.
+
+2. `break`: This is very important after each case. It stops processing the switch block when a sucessful case has been found. If the `break` statement is not there, all the cases following the current case will be executed.
+
+3. Conditions of the condition: Integral types and enums: int, long, unsigned short, etc.
+
+### ternary operator
+
+1. This is another way to write `if` statement. 
+
