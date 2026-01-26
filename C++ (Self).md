@@ -423,5 +423,10 @@ Rule: for generic code, use max() and lowest(), not min().
 
 ### ternary operator
 
-1. This is another way to write `if` statement. 
+1. This is another way to write `if` statement.
+
+2. The syntax is as follows:
+   `result = (condition) ? option1 : option2;`
+
+3. One thing to keep in mind is that the types which is also shown in the last snippet of the code that using the `{}` in a statement like `auto max1 = {(a>b)? 98.5 : b};` because of the braces {}, this is list-initialization, so auto deduces max1 as a `std::initializer_list<T>`, not a scalar. In many cases this either: causes a compilation error, or gives us `std::initializer_list<float>` instead of a numeric value.
 
