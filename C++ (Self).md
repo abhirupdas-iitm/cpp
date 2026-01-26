@@ -430,3 +430,29 @@ Rule: for generic code, use max() and lowest(), not min().
 
 3. One thing to keep in mind is that the types which is also shown in the last snippet of the code that using the `{}` in a statement like `auto max1 = {(a>b)? 98.5 : b};` because of the braces {}, this is list-initialization, so auto deduces max1 as a `std::initializer_list<T>`, not a scalar. In many cases this either: causes a compilation error, or gives us `std::initializer_list<float>` instead of a numeric value.
 
+## Loops
+
+1. We would be focusing on 4 major forms of loops which are as follows:
+   `for` loop, `range based for` loop, `while` loop and `do while` loop.
+
+2. Pillars of any loop:
+   (a) Iterator
+   (b) starting Point
+   (c) Test (controls when the loop stops)
+   (d) Increment/ Decrement
+   (e) Loop body
+
+3. If we want to get the value of the iterator outside the loop, then we should declare it oustide the scope of the loop itself.
+
+
+### `for` loops
+
+1. Syntax is: `for(iterator initialization, condition for iterator, increment/decrement criteria) { action to be done }`.
+
+2.  We can see there is another type called `size_t`. This is not a type, just a type alias for some unsigned int representation. The format is same as that for a `for` loop, except when we declare the type as `int`, we use `size_t`.
+
+### `while` loops
+
+1. Syntax is: `while (iterator < conditional value) { action_to_be_taken; increment_condition }`.
+
+2. This loop is primarily used when we do not know how many times a loop is supposed to run, but we are sure that it is supposed to run until a condition evaluates to false. 
