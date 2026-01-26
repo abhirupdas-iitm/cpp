@@ -453,6 +453,20 @@ Rule: for generic code, use max() and lowest(), not min().
 
 ### `while` loops
 
-1. Syntax is: `while (iterator < conditional value) { action_to_be_taken; increment_condition }`.
+1. Syntax is: `while (iterator < conditional_value) { action_to_be_taken; increment condition; }`.
 
 2. This loop is primarily used when we do not know how many times a loop is supposed to run, but we are sure that it is supposed to run until a condition evaluates to false. 
+
+### `do while` loops
+
+1. Syntax is: `do{ action_to_be_taken; increment/decrement condition; }while(iterator < conditional_value);`.
+
+2. This loop is like `while` loop but the only difference is, where the `while` loop only executes the action written in the block *only if* the condition is true first, the `do while` loop executes the action written in the block *at least once before* checking the condition.
+
+## Arrays
+
+1. These are ways to make collections of objects in a C++ program.
+
+2. Declaring and Using Arrays: Arrays are declared using square brackets. Syntax is: `int array_name[integer]`. The integer sets the size of the array.
+
+3. We can assign a value at a certain index using the following format: `array_name[index_number] = value`. 
