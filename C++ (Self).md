@@ -470,3 +470,13 @@ Rule: for generic code, use max() and lowest(), not min().
 2. Declaring and Using Arrays: Arrays are declared using square brackets. Syntax is: `int array_name[integer]`. The integer sets the size of the array.
 
 3. We can assign a value at a certain index using the following format: `array_name[index_number] = value`. 
+
+4. There's another way to initialize the array, where after we can explicitly give the values after declaring the size of the array. The syntax would be: `data_type array_name[size_of_array] {first_data, seond_data....last_data};`
+
+5. If we declare an array of size `n`, but we do not initialize all the indices, then the remaining values will get initialized to 0. We must remember this.
+
+6. There is another (a better) way to initialize the array. We can do what we did in the previous initialization, and it is as follows: `data_type array_name[] {first_data, seond_data....last_data};`.
+
+### Size of an array
+
+1. There is a function called `size` which can be used in the syntax of `std::size(array_name)`. 
