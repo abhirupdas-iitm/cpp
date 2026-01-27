@@ -480,3 +480,17 @@ Rule: for generic code, use max() and lowest(), not min().
 ### Size of an array
 
 1. There is a function called `size` which can be used in the syntax of `std::size(array_name)`. 
+
+2. One thing to keep note of is that if we are not interested in printing the index of the value itself, using `range based for` loops.
+
+3. One very important thing to be present at the end of an array containing string characters as elements, is the Null termination string. This tells C++ to stop printing things, escpecially if we are printing using `std::cout`. It is denoted by `\0` and placed after using a comma for the last element. It can be shown as: `char array_name[size_of_array(n)] {element<sub>1</sub>, element<sub>2</sub>, .... element<sub>n-1</sub>, '\0'};`.
+
+4. If we do the following, `char array_name[size_of_array()] {element<sub>1</sub>, element<sub>2</sub>, .... element<sub>n-1</sub>};`, in this case we may get some garbage value after our message is printed. As we can see in the `characters_in_arrays.cpp` program, we get hello printed twice.
+
+5. While `char` variables can be printed without running a loop (i.e. directly), the same cannot be done with numeric data types such as `int`, `double`, etc.
+
+6. A null terminated string is also called a 'C string' in C++.
+
+### Bounds of an Array
+
+1. 
