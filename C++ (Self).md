@@ -493,4 +493,12 @@ Rule: for generic code, use max() and lowest(), not min().
 
 ### Bounds of an Array
 
-1. 
+1. Setting absurd values isn't exactly disallowed but if it's something way above it's limits, then the program just crashes, ends the process and stops executing altogether.
+
+2. Why C++ “allows” it and others do not: C++ does not allow out-of-bounds access. It refuses to protect us from it. That choice exists because:
+   (a) Systems code cannot afford hidden costs
+   (b) The language must map directly to hardware
+   (c) The programmer is assumed to know when safety is required
+
+## Pointers
+
