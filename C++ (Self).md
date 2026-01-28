@@ -502,3 +502,30 @@ Rule: for generic code, use max() and lowest(), not min().
 
 ## Pointers
 
+1. A pointer is a variable whose value is a memory address, typically the address of another variable or data structure.
+
+2. All pointers in a given system, *of the same type* will have the same size.
+
+3. The position fo the `*` symbol doesn't really matter but using `data_type * pointer_name {nullptr};` is the safest one.
+
+4. The ampersand character here `int * p_int{&int_var};` just refers to the `int_var` written in brackets.
+
+5. We can also change the address stored in a pointer any time we want, but Pointer only stores the type for which it was declared.
+
+### Pointer to Char
+
+1. The syntax is same as the `int` type.
+
+2. In modern versions of GCC, string literals are stored in read-only memory. Therefore, declaring the pointer as `const char*` is essential. The `const` qualifier prevents modification of the string literal through the pointer, which avoids undefined behavior and potential run-time errors. As a result, omitting `const` either leads to compilation errors or unsafe code.
+
+3. Virtual Memory: A trick that fools your program into thinking it is the only program running on our OS, and all memory resources belong to it.
+
+4. Each program is abstracted into a process, and each process has access to the memory range 0 ~ 2<sup>N</sup>-1, where N is 32 on 32-bit systems and 64 on 64-bit systems.
+
+5. The entire program is not loaded in real memory by the CPU and MMU. Only parts that are about to be executed are loaded. Making effective use of real memory, a valuable and lacking resource.
+
+6. The memory map is a standard format defined by the OS. All programs written for that program must conform to it. It is usually devided into some sections.
+
+## Dynamic Memory Allocation
+
+1. 
