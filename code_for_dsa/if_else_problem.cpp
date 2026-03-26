@@ -31,7 +31,7 @@ int main(){
     if(marks>=80 and marks<=100){
         cout << "A";
     }
-    else
+    else{
         cout << "Invalid Input";
     }
     
